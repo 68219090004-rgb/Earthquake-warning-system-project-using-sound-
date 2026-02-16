@@ -1,0 +1,22 @@
+#define sw420Pin A0     //
+#define buzzerPin 8    //
+
+int vibrationValue = 0;
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  vibrationValue = analogRead(sw420Pin);
+  Serial.println(vibrationValue);
+
+  if (vibrationValue >= 50) {
+    digitalWrite(buzzerPin, HIGH);
+  } else {
+    digitalWrite(buzzerPin, LOW); 
+  }
+
+  delay(100);
+}
