@@ -1,1 +1,0 @@
-# Earthquake-warning-system-project-using-sound-
